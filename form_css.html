@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+    body {
+        background-color: #ff4d4d;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feedback-form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .feedback-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .feedback-form label {
+        margin-top: 10px;
+    }
+    
+    .feedback-form select,
+    .feedback-form textarea,
+    .feedback-form input[type="number"],
+    .feedback-form input[type="email"],
+    .feedback-form input[type="password"],
+    .feedback-form input[type="url"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .feedback-form .rating {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    
+    .feedback-form .rating label {
+        margin: 0;
+    }
+    
+    .feedback-form .terms {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .feedback-form .terms input {
+        margin-right: 10px;
+    }
+    
+    .feedback-form button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .feedback-form button:hover {
+        background-color: #45a049;
+    }
+    
+    .required {
+        color: red;
+    }
+</style>
+    
+</head>
+<body>
+    <div class="container">
+        <form class="feedback-form">
+            <h2>Feedback Form</h2>
+            <label for="feedback-type">Feedback Type:</label>
+            <select id="feedback-type" name="feedback-type">
+                <option value="compliment">Compliment</option>
+                <option value="complaint">Complaint</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label>Website Rating:</label>
+            <div class="rating">
+                <label><input type="radio" name="rating" value="excellent"> Excellent</label>
+                <label><input type="radio" name="rating" value="good"> Good</label>
+                <label><input type="radio" name="rating" value="average"> Average</label>
+                <label><input type="radio" name="rating" value="poor"> Poor</label>
+            </div>
+
+            <label for="age">Age (10-100):</label>
+            <input type="number" id="age" name="age" min="10" max="100" required>
+
+            <label for="email">Email <span class="required">*</span>:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password (min. 8 characters):</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <label for="website-url">Website URL (optional):</label>
+            <input type="url" id="website-url" name="website-url">
+
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
