@@ -1,15 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      div.contanior{
-        bottom: 1px;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  div.contanier{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+  }
+  div#grid{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "q1 q2"
+                          "q1 q2"
+                          "q1 q2"
+                          "q7 q7";
+  }
+  div#grid>div{
+    border: 1px solid;
+    
+  }
+  div#grid>div:nth-child(1){
+    grid-area: q1;
+    background-color: rgb(5, 5, 87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      }
-    </style>
-  </head>
-  <body><img src="./MasaiLogo-dark-web.png" alt=""></body>
+  }
+  div#grid>div:nth-child(2){
+    grid-area: q2;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(46, 46, 139);
+
+  }
+  div#grid>div:nth-child(3){
+    grid-area: q3;
+  }
+  div#grid>div:nth-child(4){
+    grid-area: q4;
+  }
+  div#grid>div:nth-child(5){
+    grid-area: q5;
+  }
+  div#grid>div:nth-child(6){
+    grid-area: q6;
+  }
+  div#grid>div:nth-child(7){
+    grid-area: q7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(31, 26, 26);
+  }
+  div#grid>div:nth-child(8){
+    grid-area: q8;
+  }
+  div#grid>div>img{
+    width: 200px;
+    
+  }
+  div#grid>div:nth-child(7)>div:first-child>span{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+  }
+  div#grid>div:nth-child(7)>div:last-child>a{
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  @media(max-width: 1000px ){
+    div#grid{
+    grid-template-areas: "q2 q2"
+                          "q2 q2"
+                          "q1 q1"
+                          "q7 q7";
+  }
+}
+  @media(max-width: 650px ){
+    div#grid{
+    grid-template-areas: "q7 q7"
+                          "q2 q2"
+                          "q2 q2"
+                          "q1 q1";
+  }
+  div#grid>div:nth-child(7)>div:first-child>span{
+    display: none;
+  }
+  div#grid>div:nth-child(7)>div:last-child>a{
+  
+    font-size: 10px;
+    margin-right: 10px;
+  }
+  }
+  
+  
+
+</style>
+</head>
+<body>
+  <div class="contanier">
+    <div id="grid">
+      <div><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/7f1ab8105616601.5f7d0aa06f323.png" alt=""></div>
+      <div>
+         <div>Shop</div>
+        <div>Sell</div>
+        <div>About</div>
+        <div>Shop</div>  
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div>
+        <div><span>India</span><span>english</span><span>Inr</span> </div>
+        <div><a href="">Terms of Use</a><a href="">Privacy</a><a href="">Privacy</a><a href="">nterest-based ads</a><a href="">local shops Regions</a>
+            I </div>
+      </div>
+      <div></div>
+
+    </div>
+
+  </div>
+</body>
 </html>
