@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.contanior{
+            width: 100%;
+            height: auto;
+            padding-bottom: 40px;
+            
+        }
+        @keyframes a1{
+    100%{
+        width: 950px;
+    }
+}
+        div#box{
+            width: 100%;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: auto;
+            gap: 5px;
+            grid-template-areas: "q1 ."
+                                ". q2"
+                                "q3 ."
+                                ". q4" ; 
+
+        }
+    
+        div#box>div{
+            width: 2px;
+            border: 2px solid   black;
+            background-color: #091277;
+            background-image: linear-gradient(90deg, #091277 0%, #53b5aa 100%);
+            border-radius:10px;
+            animation: a1 2s forwards;
+            
+        }
+        div#box>div:nth-child(1){
+            grid-area: q1;
+        }
+        div#box>div:nth-child(2){
+            grid-area: q2;
+        }
+        div#box>div:nth-child(3){
+            grid-area: q3;
+        }
+        div#box>div:nth-child(4){
+            grid-area: q4;
+        }
+        div#box>div:nth-child(5){
+            grid-area: q5;
+        }
+        div#box>div:nth-child(6){
+            grid-area: q6;
+        }
+        div#box>div:nth-child(7){
+            grid-area: q7;
+        }
+        div#box>div:nth-child(8){
+            grid-area: q8;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="contanior">
+        <div id="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    </div>
+</body>
+</html>
