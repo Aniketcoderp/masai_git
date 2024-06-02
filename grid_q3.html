@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Layout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #00AEEF;
+            margin: 0;
+        }
+
+        .keyboard {
+            display: grid;
+            gap: 5px;
+            grid-template-columns: repeat(14, 40px);
+            grid-template-rows: repeat(5, 40px);
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+
+        }
+
+        .key {
+            background-color: #333;
+            color: #00AEEF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            box-shadow: 1px 1px 1px  1px;
+        }
+
+        .tilde { grid-area: 1 / 1 / 2 / 2; }
+        .one { grid-area: 1 / 2 / 2 / 3; }
+        .two { grid-area: 1 / 3 / 2 / 4; }
+        .three { grid-area: 1 / 4 / 2 / 5; }
+        .four { grid-area: 1 / 5 / 2 / 6; }
+        .five { grid-area: 1 / 6 / 2 / 7; }
+        .six { grid-area: 1 / 7 / 2 / 8; }
+        .seven { grid-area: 1 / 8 / 2 / 9; }
+        .eight { grid-area: 1 / 9 / 2 / 10; }
+        .nine { grid-area: 1 / 10 / 2 / 11; }
+        .zero { grid-area: 1 / 11 / 2 / 12; }
+        .delete { grid-area: 1 / 12 / 2 / 15; }
+
+        .tab { grid-area: 2 / 1 / 3 / 2; }
+        .q { grid-area: 2 / 2 / 3 / 3; }
+        .w { grid-area: 2 / 3 / 3 / 4; }
+        .e { grid-area: 2 / 4 / 3 / 5; }
+        .r { grid-area: 2 / 5 / 3 / 6; }
+        .t { grid-area: 2 / 6 / 3 / 7; }
+        .y { grid-area: 2 / 7 / 3 / 8; }
+        .u { grid-area: 2 / 8 / 3 / 9; }
+        .i { grid-area: 2 / 9 / 3 / 10; }
+        .o { grid-area: 2 / 10 / 3 / 11; }
+        .p { grid-area: 2 / 11 / 3 / 12; }
+        .backslash { grid-area: 2 / 12 / 3 / 14; }
+
+        .caps { grid-area: 3 / 1 / 4 / 2; }
+        .a { grid-area: 3 / 2 / 4 / 3; }
+        .s { grid-area: 3 / 3 / 4 / 4; }
+        .d { grid-area: 3 / 4 / 4 / 5; }
+        .f { grid-area: 3 / 5 / 4 / 6; }
+        .g { grid-area: 3 / 6 / 4 / 7; }
+        .h { grid-area: 3 / 7 / 4 / 8; }
+        .j { grid-area: 3 / 8 / 4 / 9; }
+        .k { grid-area: 3 / 9 / 4 / 10; }
+        .l { grid-area: 3 / 10 / 4 / 11; }
+        .enter { grid-area: 3 / 11 / 5 / 14; }
+
+        .shift { grid-area: 4 / 1 / 5 / 2; }
+        .z { grid-area: 4 / 2 / 5 / 3; }
+        .x { grid-area: 4 / 3 / 5 / 4; }
+        .c { grid-area: 4 / 4 / 5 / 5; }
+        .v { grid-area: 4 / 5 / 5 / 6; }
+        .b { grid-area: 4 / 6 / 5 / 7; }
+        .n { grid-area: 4 / 7 / 5 / 8; }
+        .m { grid-area: 4 / 8 / 5 / 9; }
+        .comma { grid-area: 4 / 9 / 5 / 10; }
+        .period { grid-area: 4 / 10 / 5 / 11; }
+        .shift-right { grid-area: 4 / 11 / 5 / 14; }
+
+        .globe { grid-area: 5 / 1 / 6 / 2; }
+        .control { grid-area: 5 / 2 / 6 / 3; }
+        .option-left { grid-area: 5 / 3 / 6 / 4; }
+        .alt { grid-area: 5 / 4 / 6 / 5; }
+        .space { grid-area: 5 / 5 / 6 / 10; }
+        .alt-right { grid-area: 5 / 10 / 6 / 11; }
+        .option-right { grid-area: 5 / 11 / 6 / 12; }
+        .arrow-left { grid-area: 5 / 12 / 6 / 13; }
+        .arrow-up { grid-area: 4 / 13 / 5 / 14; }
+        .arrow-down { grid-area: 5 / 13 / 6 / 14; }
+        .arrow-right { grid-area: 5 / 14 / 6 / 15; }
+    </style>
+</head>
+<body>
+    <div class="keyboard">
+        <div class="key tilde">~</div>
+        <div class="key one">1</div>
+        <div class="key two">2</div>
+        <div class="key three">3</div>
+        <div class="key four">4</div>
+        <div class="key five">5</div>
+        <div class="key six">6</div>
+        <div class="key seven">7</div>
+        <div class="key eight">8</div>
+        <div class="key nine">9</div>
+        <div class="key zero">0</div>
+        <div class="key delete">Delete</div>
+
+        <div class="key tab">tab</div>
+        <div class="key q">Q</div>
+        <div class="key w">W</div>
+        <div class="key e">E</div>
+        <div class="key r">R</div>
+        <div class="key t">T</div>
+        <div class="key y">Y</div>
+        <div class="key u">U</div>
+        <div class="key i">I</div>
+        <div class="key o">O</div>
+        <div class="key p">P</div>
+        <div class="key backslash">\</div>
+
+        <div class="key caps">caps</div>
+        <div class="key a">A</div>
+        <div class="key s">S</div>
+        <div class="key d">D</div>
+        <div class="key f">F</div>
+        <div class="key g">G</div>
+        <div class="key h">H</div>
+        <div class="key j">J</div>
+        <div class="key k">K</div>
+        <div class="key l">L</div>
+        <div class="key enter">Enter</div>
+
+        <div class="key shift">shift</div>
+        <div class="key z">Z</div>
+        <div class="key x">X</div>
+        <div class="key c">C</div>
+        <div class="key v">V</div>
+        <div class="key b">B</div>
+        <div class="key n">N</div>
+        <div class="key m">M</div>
+        <div class="key comma">,</div>
+        <div class="key period">.</div>
+        <div class="key shift-right">shift</div>
+
+        <div class="key globe">&#127760;</div>
+        <div class="key control">control</div>
+        <div class="key option-left">option</div>
+        <div class="key alt">alt</div>
+        <div class="key space">space</div>
+        <div class="key alt-right">alt</div>
+        <div class="key option-right">
